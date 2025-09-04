@@ -1,0 +1,207 @@
+version: 2
+
+models:
+  # ---------- DIMS BÁSICAS ----------
+  - name: dim_borough
+    description: "Catálogo de boroughs."
+    columns:
+      - name: borough_key
+        tests: [not_null, unique]
+      - name: borough_name
+        tests: [not_null, unique]
+      - name: population
+      - name: land_area_km2
+      - name: density_km2
+
+  - name: dim_neighbourhood
+    description: "Catálogo de barrios (neighbourhoods) por borough."
+    columns:
+      - name: neighbourhood_key
+        tests: [not_null, unique]
+      - name: neighbourhood_name
+        tests: [not_null]
+      - name: borough_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_borough')
+              field: borough_key
+
+  - name: dim_room_type
+    description: "Catálogo de tipos de habitación."
+    columns:
+      - name: room_type_key
+        tests: [not_null, unique]
+      - name: room_type
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "Entire home/apt"
+                - "Private room"
+                - "Shared room"
+                - "Hotel room"
+
+  # ---------- CALENDARIO ----------
+  - name: dim_date
+    description: "Calendario basado en snapshot_date de ab_nyc."
+    columns:
+      - name: date_key
+        tests: [not_null, unique]
+      - name: date
+        tests: [not_null]
+      - name: year
+        tests: [not_null]
+      - name: month
+        tests: [not_null]
+      - name: day
+        tests: [not_null]
+
+  # ---------- FX ----------
+  - name: dim_exchange_rate
+    description: "Tasa USD→MXN por día (curada, una fila por rate_date)."
+    columns:
+      - name: rate_key
+        tests: [not_null, unique]
+      - name: rate_date
+        tests: [not_null, unique]
+      - name: rate_date_key
+        tests: [not_null]
+      - name: usd_to_mxn
+        tests: [not_null]
+      - name: updated_at
+        tests: [not_null]
+
+  - name: fx_rate_audit
+    description: "Log append-only de lecturas a Banxico."
+    columns:
+    - name: audit_key
+      tests: [not_null, unique]
+    - name: read_at
+      tests: [not_null]
+    - name: read_date_key
+      tests:
+        - not_null
+        - relationships:
+            to: ref('dim_date')
+            field: date_key
+    - name: rate_date
+      tests: [not_null]
+    - name: rate_date_key
+      tests:
+        - not_null
+        - relationships:
+            to: ref('dim_exchange_rate')
+            field: rate_date_key
+    - name: usd_to_mxn
+      tests: [not_null]
+    - name: source
+      tests:
+        - accepted_values:
+            values: ['banxico']
+
+  # ---------- SCD2 DIMS ----------
+  - name: dim_host
+    description: "Dimensión SCD2 de host (vigencias)."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [host_key, effective_from]
+    columns:
+      - name: host_key
+        tests: [not_null]
+      - name: host_id_nat
+        tests: [not_null]
+      - name: host_name
+      - name: calculated_host_listings_count
+      - name: effective_from
+        tests: [not_null]
+      - name: effective_to
+        tests: [not_null]
+      - name: is_current
+        tests:
+          - accepted_values: {values: [true, false]}
+
+  - name: dim_listing
+    description: "Dimensión SCD2 de listing (vigencias + llaves de clasificación)."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [listing_key, effective_from]
+    columns:
+      - name: listing_key
+        tests: [not_null]
+      - name: listing_name
+      - name: listing_id_nat
+        tests: [not_null]
+      - name: host_key
+        tests:
+          - not_null
+          - relationships: {to: ref('dim_host'), field: host_key}
+      - name: borough_key
+        tests:
+          - relationships: {to: ref('dim_borough'), field: borough_key}
+      - name: neighbourhood_key
+        tests:
+          - relationships: {to: ref('dim_neighbourhood'), field: neighbourhood_key}
+      - name: room_type_key
+        tests:
+          - relationships: {to: ref('dim_room_type'), field: room_type_key}
+      - name: latitude
+      - name: longitude
+      - name: effective_from
+        tests: [not_null]
+      - name: effective_to
+        tests: [not_null]
+      - name: is_current
+        tests:
+          - accepted_values: {values: [true, false]}
+
+  # ---------- FACT ----------
+  - name: fct_listing_snapshot
+    description: "Hecho por listing x snapshot con tipo de cambio as-of."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [listing_key, snapshot_date_key]
+    columns:
+      - name: listing_key
+        tests:
+          - not_null
+          - relationships: {to: ref('dim_listing'), field: listing_key}
+      - name: host_key
+        tests:
+          - relationships: {to: ref('dim_host'), field: host_key}
+      - name: borough_key
+        tests:
+          - relationships: {to: ref('dim_borough'), field: borough_key}
+      - name: neighbourhood_key
+        tests:
+          - relationships: {to: ref('dim_neighbourhood'), field: neighbourhood_key}
+      - name: room_type_key
+        tests:
+          - relationships: {to: ref('dim_room_type'), field: room_type_key}
+      - name: snapshot_date_key
+        tests:
+          - not_null
+          - relationships: {to: ref('dim_date'), field: date_key}
+      - name: exchange_rate_date_key
+        tests:
+          - not_null
+          - relationships: {to: ref('dim_exchange_rate'), field: rate_date_key}
+      - name: price_usd
+        tests: [not_null]
+      - name: price_mxn
+        tests: [not_null]
+      - name: availability_365
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 365"
+      - name: minimum_nights
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: number_of_reviews
+      - name: reviews_per_month
+      - name: last_review_date
+      - name: is_active
+        tests:
+          - accepted_values: {values: [true, false]}
+      - name: revenue_proxy_mxn

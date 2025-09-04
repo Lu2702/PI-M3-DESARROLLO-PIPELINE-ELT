@@ -1,0 +1,14 @@
+# ---- Airflow providers ----
+apache-airflow-providers-postgres
+apache-airflow-providers-common-sql
+psycopg2-binary==2.9.9
+
+# ---- Extractor ----
+pandas
+requests
+python-dotenv
+beautifulsoup4
+
+# ---- dbt (alineado en 1.9.0 para evitar conflicto con pathspec 0.12.1) ----
+#dbt-core==1.9.0
+#dbt-postgres==1.9.0

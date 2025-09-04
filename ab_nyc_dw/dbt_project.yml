@@ -1,0 +1,25 @@
+name: ab_nyc_dw
+version: '1.0.0'
+config-version: 2
+profile: ab_nyc_dw
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+
+models:
+  ab_nyc_dw:
+    +materialized: view
+    staging:
+      +schema: staging
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold
+
+snapshots:
+  ab_nyc_dw:
+    +target_schema: silver
+
+vars:
+  date_floor: '2025-08-28'   # tu piso real
+  date_days_ahead: 7         # colchón hacia adelante

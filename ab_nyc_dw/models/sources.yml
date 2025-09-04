@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_ext
+    schema: raw_ext
+    tables:
+      - name: ab_nyc_latest
+      - name: banxico_latest
+      - name: nyc_boroughs_latest
+

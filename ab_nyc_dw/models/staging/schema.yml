@@ -1,0 +1,92 @@
+models:
+  # ===================== stg_ab_nyc =====================
+  - name: stg_ab_nyc
+    description: "Staging de AB_NYC: tipado/limpieza y snapshot_date/_key (fecha del dataset)."
+    columns:
+      - name: listing_id_nat
+        description: "ID natural del listing proveniente del CSV AB_NYC."
+        tests: [not_null, unique]
+
+      - name: host_id_nat
+        description: "ID natural del host."
+        tests: [not_null]
+
+      - name: listing_name
+        description: "Nombre del anuncio."
+
+      - name: borough_name
+        description: "Borough (neighbourhood_group)."
+        tests: [not_null]
+
+      - name: neighbourhood_name
+        description: "Vecindario."
+
+      - name: room_type
+        description: "Tipo de habitación."
+        tests:
+          - accepted_values:
+              values: ["Entire home/apt", "Private room", "Shared room", "Hotel room"]
+
+      - name: latitude
+        description: "Latitud en grados decimales."
+
+      - name: longitude
+        description: "Longitud en grados decimales."
+
+      - name: price_usd
+        description: "Precio listado en USD; suele venir presente."
+        tests: [not_null]
+
+      - name: minimum_nights
+        description: "Noches mínimas requeridas."
+        tests: [not_null]
+
+      - name: number_of_reviews
+        description: "Número de reseñas históricas."
+
+      - name: reviews_per_month
+        description: "Reseñas/mes; puede ser NULL."
+
+      - name: availability_365
+        description: "Disponibilidad declarada en días sobre 365."
+        tests: [not_null]
+
+      - name: last_review_date
+        description: "Fecha del último review; puede ser NULL."
+
+      - name: snapshot_date
+        description: "Fecha del snapshot (fecha del dataset AB_NYC)."
+        tests: [not_null]
+
+      - name: snapshot_date_key
+        description: "Clave de fecha del snapshot en formato YYYYMMDD."
+        tests: [not_null]
+
+  # ===================== stg_banxico =====================
+  - name: stg_banxico
+    description: "Staging de Banxico: tasa USD→MXN por día."
+    columns:
+      - name: rate_date
+        description: "Fecha de la tasa."
+        tests: [not_null, unique]
+
+      - name: usd_to_mxn
+        description: "Tipo de cambio USD→MXN."
+        tests: [not_null]
+
+  # ===================== stg_boroughs =====================
+  - name: stg_boroughs
+    description: "Staging de boroughs (datos casi estáticos)."
+    columns:
+      - name: borough_name
+        description: "Nombre del borough normalizado."
+        tests: [not_null, unique]
+
+      - name: population
+        description: "Población estimada; puede faltar en algunas fuentes."
+
+      - name: land_area_km2
+        description: "Área de tierra en km²; puede faltar."
+
+      - name: density
+        description: "Densidad poblacional; puede faltar."

@@ -1,0 +1,39 @@
+# --- Credenciales (NO subir) ---
+.env
+.env.*
+airflow.env
+.user.yml   
+
+# --- DBT ---
+target/
+dbt_packages/
+
+# --- Airflow logs (no subir) ---
+logs_airflow/
+**/logs/     
+!/logs/      
+
+# --- Python / Notebooks ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# --- VS Code / OS ---
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# --- Otros comunes ---
+dist/
+build/
+**/latest.csv

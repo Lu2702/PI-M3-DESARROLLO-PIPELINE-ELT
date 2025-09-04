@@ -1,0 +1,120 @@
+
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    env_file: .env
+    ports:
+      - "5433:5432"    
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./data:/data   
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  dbt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app/ab_nyc_dw          
+    env_file: .env
+    environment:
+      - DBT_PROFILES_DIR=/app/ab_nyc_dw   
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  extractor:
+    build:
+      context: .
+      dockerfile: extractor.Dockerfile   
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - .:/app       
+      - ./inputs:/inputs
+      - ./logs:/logs
+    # ENTRYPOINT ya está en extractor.Dockerfile (python -m src.main)
+
+  # ---------- AIRFLOW ----------
+  airflow-init:
+    image: local/airflow:latest
+    env_file:
+      - ./airflow.env
+      - ./.env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://nyc_user:nyc_pass@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Mexico_City
+      AIRFLOW_UID: "50000"
+    command: bash -lc "echo init ok"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./:/opt/airflow/repo
+      - ./dags:/opt/airflow/dags
+      - ./logs_airflow:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./scripts:/scripts
+      - ./data:/opt/airflow/repo/data         
+
+  airflow-webserver:
+    image: local/airflow:latest
+    env_file:
+      - ./airflow.env
+      - ./.env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://nyc_user:nyc_pass@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Mexico_City
+      AIRFLOW_UID: "50000"
+    command: bash -lc "airflow webserver"
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./:/opt/airflow/repo
+      - ./dags:/opt/airflow/dags
+      - ./logs_airflow:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./scripts:/scripts
+      - ./data:/opt/airflow/repo/data      
+
+  airflow-scheduler:
+    image: local/airflow:latest
+    env_file:
+      - ./airflow.env
+      - ./.env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://nyc_user:nyc_pass@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Mexico_City
+      AIRFLOW_UID: "50000"
+    command: bash -lc "airflow scheduler"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./:/opt/airflow/repo
+      - ./dags:/opt/airflow/dags
+      - ./logs_airflow:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./scripts:/scripts
+      - ./data:/opt/airflow/repo/data         
+
+volumes:
+  pgdata:

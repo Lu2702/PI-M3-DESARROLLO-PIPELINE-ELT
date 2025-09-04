@@ -1,0 +1,260 @@
+version: 2
+
+models:
+
+  # Q1 — Precio promedio por borough/barrio/listing (último corte)
+  - name: gq1_price_by_area
+    description: "Foto del último snapshot: promedio de precios por borough, barrio y listing; USD (dataset), MXN as-of y MXN con FX más reciente."
+    tags: ["gold","q1"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: neighbourhood_name
+        tests: [not_null]
+      - name: listing_name
+      - name: avg_price_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_price_usd is not null"
+      - name: avg_price_mxn_asof
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_price_mxn_asof is not null"
+      - name: avg_price_mxn_fx_latest
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_price_mxn_fx_latest is not null"
+
+  # Q2 — Tipo de habitación: oferta y revenue estimado
+  - name: gq2_roomtype_supply_revenue
+    description: "Revenue proxy por tipo de habitación: MXN as-of, USD y MXN al último FX; conteo de activos y rankings."
+    tags: ["gold","q2"]
+    columns:
+      - name: room_type
+        tests: [not_null]
+      - name: active_listings
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: est_revenue_mxn_asof
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "est_revenue_mxn_asof is not null"
+      - name: est_revenue_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "est_revenue_usd is not null"
+      - name: est_revenue_mxn_fx_latest
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "est_revenue_mxn_fx_latest is not null"
+      - name: popularity_rank
+      - name: revenue_rank
+
+  # Q3 — Top hosts por propiedades + pricing USD
+  - name: gq3_top_hosts_pricing
+    description: "Top de hosts por número de propiedades en el último corte; promedio y desviación de precio (USD)."
+    tags: ["gold","q3"]
+    columns:
+      - name: rn
+      - name: host_name
+      - name: properties
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: properties_active
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "properties_active is not null"
+      - name: avg_price_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_price_usd is not null"
+      - name: std_price_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "std_price_usd is not null"
+
+  # Q4 — Disponibilidad por borough y room type (media/mediana)
+  - name: gq4_availability_diffs
+    description: "Media y mediana de availability_365 (0–365) por borough y tipo de habitación en el último corte."
+    tags: ["gold","q4"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: room_type
+        tests: [not_null]
+      - name: avg_availability_yr
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 365
+              row_condition: "avg_availability_yr is not null"
+      - name: p50_availability
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 365
+              row_condition: "p50_availability is not null"
+
+  # Q5 — Tendencia mensual de reseñas (con last_review_date)
+  - name: gq5_reviews_trend_monthly
+    description: "Promedio de reviews_per_month y conteo de listings con reseña por mes (YYYY-MM) y borough."
+    tags: ["gold","q5"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: ym
+        description: "Mes en formato YYYY-MM."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: '^[0-9]{4}-[0-9]{2}$'
+      - name: avg_reviews_per_month
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_reviews_per_month is not null"
+      - name: listings_with_review
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "listings_with_review is not null"
+
+  # Q6 — Barrios con mayor concentración de activos (último corte)
+  - name: gq6_active_listings_concentration
+    description: "Top de barrios con mayor concentración de listings activos (solo borough y barrio)."
+    tags: ["gold","q6"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: neighbourhood_name
+        tests: [not_null]
+
+  # Q7 — Distribución de precios USD + outliers IQR y precio MXN (FX más reciente)
+  - name: gq7_price_distribution_outliers
+    description: "Distribución en USD por borough y room_type (media, sd, p25/p50/p75), precio MXN al último FX y flag de outlier por IQR."
+    tags: ["gold","q7"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: room_type
+        tests: [not_null]
+      - name: price_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: price_mxn_fx_latest
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "price_mxn_fx_latest is not null"
+      - name: mean_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "mean_usd is not null"
+      - name: sd_usd
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "sd_usd is not null"
+      - name: p25_usd
+      - name: p50_usd
+      - name: p75_usd
+      - name: iqr_high_usd
+      - name: iqr_low_usd
+      - name: is_outlier_iqr_usd
+        tests: [not_null]
+      - name: outlier_side
+        tests:
+          - accepted_values:
+              values: ['high','low']
+
+    tests:
+    # p25 <= p50
+    - dbt_utils.expression_is_true:
+        expression: "(p25_usd is null or p50_usd is null) or p25_usd <= p50_usd"
+
+    # p50 <= p75
+    - dbt_utils.expression_is_true:
+        expression: "(p50_usd is null or p75_usd is null) or p50_usd <= p75_usd"
+
+    # iqr_high_usd >= p75
+    - dbt_utils.expression_is_true:
+        expression: "(iqr_high_usd is null or p75_usd is null) or iqr_high_usd >= p75_usd"
+
+    # iqr_low_usd <= p25
+    - dbt_utils.expression_is_true:
+        expression: "(iqr_low_usd is null or p25_usd is null) or iqr_low_usd <= p25_usd"
+
+  # Q8 — Disponibilidad vs reseñas por bandas (último corte)
+  - name: gq8_availability_vs_reviews
+    description: "Bandas (10) de availability_365 con promedios de disponibilidad y reviews_per_month; conteo de listings por banda."
+    tags: ["gold","q8"]
+    columns:
+      - name: availability_band
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 10
+      - name: availability_range_days
+      - name: avg_availability_days
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 365
+              row_condition: "avg_availability_days is not null"
+      - name: avg_reviews_per_month
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "avg_reviews_per_month is not null"
+      - name: listings_count
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+  # Q9 — Oferta per cápita y densidad por borough + semáforo fijo
+  - name: gq9_borough_supply_density_ranked
+    description: "Oferta activa por borough normalizada por población (100k hab.) y superficie (km²), con ranks, percentiles y semáforo fijo; último snapshot."
+    tags: ["gold","q9"]
+    columns:
+      - name: borough_name
+        tests: [not_null]
+      - name: active_listings
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+      - name: population
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "population is not null"
+      - name: land_area_km2
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              row_condition: "land_area_km2 is not null"
+      - name: oferta_per_capita_100k
+      - name: densidad_oferta_km2
+      - name: rank_per_capita
+      - name: rank_density
+      - name: pctl_combined
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: semaforo_combined
+        tests:
+          - accepted_values:
+              values: ['Alto','Medio','Bajo']

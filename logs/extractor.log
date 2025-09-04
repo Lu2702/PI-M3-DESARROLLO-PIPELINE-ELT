@@ -1,0 +1,719 @@
+2025-08-25 08:11:15,230 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-25 08:11:15,231 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-25 08:11:15,639 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T141115Z.csv
+2025-08-25 08:11:15,640 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-25 08:11:15,640 | INFO | __main__ | OK. Archivo guardado en RAW: ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T141115Z.csv
+2025-08-25 08:11:15,641 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-25 13:22:33,881 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-25 13:22:33,882 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-25 13:22:34,328 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T192234Z.csv
+2025-08-25 13:22:34,328 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-25 13:22:34,329 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T192234Z.csv
+2025-08-25 13:22:34,329 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-25 13:22:34,330 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-25 13:22:34,331 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-25 13:22:34,413 | ERROR | src.extract.extract_banxico | Fallo HTTP al llamar Banxico: 400 Client Error: Bad Request for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/oportuno?token=89f4ed85e4fd71ded6fca1e548194b4c7a014ab24bade9d30283afd185fabd51&format=json
+2025-08-25 13:22:34,414 | ERROR | __main__ | BANXICO ERROR: Error HTTP al llamar Banxico: 400 Client Error: Bad Request for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/oportuno?token=89f4ed85e4fd71ded6fca1e548194b4c7a014ab24bade9d30283afd185fabd51&format=json
+2025-08-25 13:22:34,416 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250825T192234Z.json
+2025-08-25 13:22:34,416 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-25 13:34:36,486 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-25 13:34:36,486 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-25 13:34:37,182 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T193436Z.csv
+2025-08-25 13:34:37,182 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-25 13:34:37,184 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T193436Z.csv
+2025-08-25 13:34:37,185 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-25 13:34:37,185 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-25 13:34:37,185 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-25 13:34:37,334 | ERROR | src.extract.extract_banxico | Fallo HTTP al llamar Banxico: 400 Client Error: Bad Request for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/oportuno?token=89f4ed85e4fd71ded6fca1e548194b4c7a014ab24bade9d30283afd185fabd51&format=json
+2025-08-25 13:34:37,334 | ERROR | __main__ | BANXICO ERROR: Error HTTP al llamar Banxico: 400 Client Error: Bad Request for url: https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/oportuno?token=89f4ed85e4fd71ded6fca1e548194b4c7a014ab24bade9d30283afd185fabd51&format=json
+2025-08-25 13:34:37,334 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250825T193437Z.json
+2025-08-25 13:34:37,334 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-25 14:08:53,485 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-25 14:08:53,485 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-25 14:08:53,950 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T200853Z.csv
+2025-08-25 14:08:53,950 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-25 14:08:53,950 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T200853Z.csv
+2025-08-25 14:08:53,950 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-25 14:08:53,950 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-25 14:08:53,950 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-25 14:08:57,129 | ERROR | __main__ | BANXICO ERROR: HTTP 400 Bad Request. Respuesta: 'Ha tecleado un caracter no válido en uno de los campos del formulario. Por favor regrese a la pantalla anterior e intente de nuevo la operación.'
+2025-08-25 14:08:57,137 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250825T200857Z.json
+2025-08-25 14:08:57,137 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-25 14:18:46,947 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-25 14:18:46,947 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-25 14:18:47,427 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T201847Z.csv
+2025-08-25 14:18:47,427 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-25 14:18:47,427 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/25\ab_nyc_20250825T201847Z.csv
+2025-08-25 14:18:47,427 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-25 14:18:47,427 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-25 14:18:47,427 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-25 14:18:47,642 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/25\banxico_SF43718_20250825T201847Z.csv
+2025-08-25 14:18:47,642 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-25 14:18:47,642 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/25\banxico_SF43718_20250825T201847Z.csv
+2025-08-25 14:18:47,642 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-26 13:02:47,947 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-26 13:02:47,948 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-26 13:02:48,371 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T190248Z.csv
+2025-08-26 13:02:48,372 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-26 13:02:48,372 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T190248Z.csv
+2025-08-26 13:02:48,373 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-26 13:02:48,373 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-26 13:02:48,373 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-26 13:02:48,374 | ERROR | __main__ | BANXICO ERROR: Falta BANXICO_TOKEN en .env
+2025-08-26 13:02:48,375 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250826T190248Z.json
+2025-08-26 13:02:48,375 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-26 13:02:48,375 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-26 13:02:48,376 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-26 13:02:48,725 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados detectados: ["New York City'sfive boroughsvte", 'Jurisdiction', 'Population', 'Land area', 'Density of population', 'GDP', 'Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-26 13:02:48,727 | ERROR | __main__ | SCRAPER_NYC ERROR: 14 columns passed, passed data had 8 columns
+2025-08-26 13:02:48,729 | WARNING | __main__ | Scraper NYC marcado FAILED (soft). Status: data/status/scraper_nyc_20250826T190248Z.json
+2025-08-26 13:02:48,729 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-26 13:02:48,730 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-26 13:09:59,744 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-26 13:09:59,744 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-26 13:10:00,155 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T190959Z.csv
+2025-08-26 13:10:00,156 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-26 13:10:00,156 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T190959Z.csv
+2025-08-26 13:10:00,157 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-26 13:10:00,157 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-26 13:10:00,157 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-26 13:10:00,157 | ERROR | __main__ | BANXICO ERROR: Falta BANXICO_TOKEN en .env
+2025-08-26 13:10:00,158 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250826T191000Z.json
+2025-08-26 13:10:00,159 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-26 13:10:00,159 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-26 13:10:00,160 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-26 13:10:00,629 | ERROR | __main__ | SCRAPER_NYC ERROR: No encontré una 'wikitable' con Borough y Population en la última fila de encabezados.
+2025-08-26 13:10:00,630 | WARNING | __main__ | Scraper NYC marcado FAILED (soft). Status: data/status/scraper_nyc_20250826T191000Z.json
+2025-08-26 13:10:00,631 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-26 13:10:00,632 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-26 13:17:57,130 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-26 13:17:57,131 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-26 13:17:57,534 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T191757Z.csv
+2025-08-26 13:17:57,535 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-26 13:17:57,535 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T191757Z.csv
+2025-08-26 13:17:57,536 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-26 13:17:57,536 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-26 13:17:57,537 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-26 13:17:57,537 | ERROR | __main__ | BANXICO ERROR: Falta BANXICO_TOKEN en .env
+2025-08-26 13:17:57,538 | WARNING | __main__ | Banxico marcado FAILED (soft). Status: data/status/banxico_20250826T191757Z.json
+2025-08-26 13:17:57,539 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-26 13:17:57,540 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-26 13:17:57,540 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-26 13:17:57,862 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-26 13:17:57,865 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-26 13:17:57,902 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/26\nyc_boroughs_20250826T191757Z.csv (rows=5)
+2025-08-26 13:17:57,903 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/26\nyc_boroughs_20250826T191757Z.csv
+2025-08-26 13:17:57,903 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-26 13:17:57,904 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-26 13:43:01,221 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-26 13:43:01,221 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-26 13:43:01,630 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T194301Z.csv
+2025-08-26 13:43:01,632 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-26 13:43:01,632 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/26\ab_nyc_20250826T194301Z.csv
+2025-08-26 13:43:01,632 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-26 13:43:01,633 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-26 13:43:01,633 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-26 13:43:01,778 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/26\banxico_SF43718_20250826T194301Z.csv
+2025-08-26 13:43:01,779 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-26 13:43:01,780 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/26\banxico_SF43718_20250826T194301Z.csv
+2025-08-26 13:43:01,781 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-26 13:43:01,781 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-26 13:43:01,782 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-26 13:43:02,102 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-26 13:43:02,105 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-26 13:43:02,109 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/26\nyc_boroughs_20250826T194302Z.csv (rows=5)
+2025-08-26 13:43:02,110 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/26\nyc_boroughs_20250826T194302Z.csv
+2025-08-26 13:43:02,111 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-26 13:43:02,111 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-27 07:04:18,674 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 07:04:18,679 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 07:04:19,422 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130418Z.csv
+2025-08-27 07:04:19,422 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 07:04:19,422 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130418Z.csv
+2025-08-27 07:09:32,247 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 07:09:32,247 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 07:09:32,656 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 07:09:32,657 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 07:09:32,658 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 07:09:32,658 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv (7126583 bytes)
+2025-08-27 07:09:32,686 | INFO | src.utils.verify | [verify] registro en manifiest: data/status/manifest_raw.jsonl
+2025-08-27 07:09:32,687 | INFO | __main__ | [verify] registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 07:09:32,687 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-27 07:09:32,687 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-27 07:09:32,687 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-27 07:09:32,955 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv
+2025-08-27 07:09:32,956 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-27 07:09:32,957 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv
+2025-08-27 07:09:32,957 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv (33 bytes)
+2025-08-27 07:09:32,983 | INFO | src.utils.verify | [verify] registro en manifiest: data/status/manifest_raw.jsonl
+2025-08-27 07:09:32,983 | INFO | __main__ | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv md5=dbcd7e99622f2c49939e7422dceebb28
+2025-08-27 07:09:32,984 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-27 07:09:32,985 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-27 07:09:32,985 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-27 07:09:33,350 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-27 07:09:33,352 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-27 07:09:33,370 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv (rows=5)
+2025-08-27 07:09:33,371 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv
+2025-08-27 07:09:33,372 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv (207 bytes)
+2025-08-27 07:09:33,392 | INFO | src.utils.verify | [verify] registro en manifiest: data/status/manifest_raw.jsonl
+2025-08-27 07:09:33,392 | INFO | __main__ | [verify] registered source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 07:09:33,393 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-27 07:09:33,393 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-27 07:19:58,526 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 07:19:58,527 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 07:19:58,938 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv
+2025-08-27 07:19:58,939 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 07:19:58,939 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv
+2025-08-27 07:19:58,939 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv (7126583 bytes)
+2025-08-27 07:19:58,962 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv == ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 07:19:58,963 | WARNING | __main__ | [verify] duplicate_detected source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 07:19:58,965 | WARNING | __main__ | [dedupe] removed source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T131958Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 07:19:58,967 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-27 07:19:58,967 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-27 07:19:58,968 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-27 07:19:59,092 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv
+2025-08-27 07:19:59,093 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-27 07:19:59,094 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv
+2025-08-27 07:19:59,094 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv (33 bytes)
+2025-08-27 07:19:59,096 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv == ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv
+2025-08-27 07:19:59,097 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv md5=dbcd7e99622f2c49939e7422dceebb28
+2025-08-27 07:19:59,098 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T131959Z.csv md5=dbcd7e99622f2c49939e7422dceebb28
+2025-08-27 07:19:59,098 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-27 07:19:59,099 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-27 07:19:59,099 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-27 07:19:59,526 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-27 07:19:59,527 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-27 07:19:59,532 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv (rows=5)
+2025-08-27 07:19:59,533 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv
+2025-08-27 07:19:59,534 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv (207 bytes)
+2025-08-27 07:19:59,543 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv == ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv
+2025-08-27 07:19:59,544 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 07:19:59,546 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T131959Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 07:19:59,546 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-27 07:19:59,547 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-27 07:27:28,110 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 07:27:28,110 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 07:27:28,512 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv
+2025-08-27 07:27:28,512 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 07:27:28,513 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv
+2025-08-27 07:27:28,513 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv (7126583 bytes)
+2025-08-27 07:27:28,536 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv == ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 07:27:28,537 | WARNING | __main__ | [verify] duplicate_detected source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 07:27:28,542 | WARNING | __main__ | [dedupe] removed source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T132728Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 07:27:28,543 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-27 07:27:28,543 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-27 07:27:28,544 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-27 07:27:29,210 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv
+2025-08-27 07:27:29,210 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-27 07:27:29,211 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv
+2025-08-27 07:27:29,212 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv (33 bytes)
+2025-08-27 07:27:29,214 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv == ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T130932Z.csv
+2025-08-27 07:27:29,215 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv md5=dbcd7e99622f2c49939e7422dceebb28
+2025-08-27 07:27:29,218 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T132729Z.csv md5=dbcd7e99622f2c49939e7422dceebb28
+2025-08-27 07:27:29,218 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-27 07:27:29,219 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-27 07:27:29,220 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-27 07:27:29,606 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-27 07:27:29,608 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-27 07:27:29,614 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv (rows=5)
+2025-08-27 07:27:29,615 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv
+2025-08-27 07:27:29,616 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv (207 bytes)
+2025-08-27 07:27:29,618 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv == ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv
+2025-08-27 07:27:29,619 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 07:27:29,623 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T132729Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 07:27:29,623 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-27 07:27:29,624 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-27 15:00:13,116 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 15:00:13,118 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 15:00:13,551 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv
+2025-08-27 15:00:13,552 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 15:00:13,552 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv
+2025-08-27 15:00:13,554 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv (7126583 bytes)
+2025-08-27 15:00:13,579 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv == ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 15:00:13,580 | WARNING | __main__ | [verify] duplicate_detected source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 15:00:13,581 | WARNING | __main__ | [dedupe] removed source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210013Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 15:05:18,891 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 15:05:18,891 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 15:05:19,303 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv
+2025-08-27 15:05:19,304 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 15:05:19,304 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv
+2025-08-27 15:05:19,306 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv (7126583 bytes)
+2025-08-27 15:05:19,329 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv == ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 15:05:19,330 | WARNING | __main__ | [verify] duplicate_detected source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 15:05:19,334 | WARNING | __main__ | [dedupe] removed source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T210519Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 15:05:19,452 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq\dq_ab_nyc_20250827T210519Z.json
+2025-08-27 15:05:19,454 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq\dq_ab_nyc_20250827T210519Z.json
+2025-08-27 15:05:19,455 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-27 15:05:19,455 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-27 15:05:19,455 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-27 15:05:19,654 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T210519Z.csv
+2025-08-27 15:05:19,654 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-27 15:05:19,655 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T210519Z.csv
+2025-08-27 15:05:19,656 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T210519Z.csv (33 bytes)
+2025-08-27 15:05:19,667 | INFO | src.utils.verify | [verify] registro en manifiest: data/status/manifest_raw.jsonl
+2025-08-27 15:05:19,667 | INFO | __main__ | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T210519Z.csv md5=34d195cbded546136efcd375b59e6675
+2025-08-27 15:05:19,670 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq\dq_banxico_20250827T210519Z.json
+2025-08-27 15:05:19,671 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq\dq_banxico_20250827T210519Z.json
+2025-08-27 15:05:19,672 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-27 15:05:19,673 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-27 15:05:19,673 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-27 15:05:20,199 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-27 15:05:20,200 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-27 15:05:20,214 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv (rows=5)
+2025-08-27 15:05:20,215 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv
+2025-08-27 15:05:20,216 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv (207 bytes)
+2025-08-27 15:05:20,228 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv == ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv
+2025-08-27 15:05:20,229 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 15:05:20,230 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T210520Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 15:05:20,237 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq\dq_nyc_boroughs_20250827T210520Z.json
+2025-08-27 15:05:20,238 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq\dq_nyc_boroughs_20250827T210520Z.json
+2025-08-27 15:05:20,238 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-27 15:05:20,238 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-27 16:39:16,850 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-27 16:39:16,852 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-27 16:39:17,326 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv
+2025-08-27 16:39:17,327 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-27 16:39:17,327 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv
+2025-08-27 16:39:17,328 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv (7126583 bytes)
+2025-08-27 16:39:17,356 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv == ./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T130932Z.csv
+2025-08-27 16:39:17,356 | WARNING | __main__ | [verify] duplicate_detected source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 16:39:17,364 | WARNING | __main__ | [dedupe] removed source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/27\ab_nyc_20250827T223916Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-27 16:39:17,461 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq\dq_ab_nyc_20250827T223917Z.json
+2025-08-27 16:39:17,461 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq\dq_ab_nyc_20250827T223917Z.json
+2025-08-27 16:39:17,461 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-27 16:39:17,461 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-27 16:39:17,461 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-27 16:39:17,655 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv
+2025-08-27 16:39:17,663 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-27 16:39:17,663 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv
+2025-08-27 16:39:17,663 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv (33 bytes)
+2025-08-27 16:39:17,663 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv == ./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T210519Z.csv
+2025-08-27 16:39:17,663 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv md5=34d195cbded546136efcd375b59e6675
+2025-08-27 16:39:17,663 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw\files\banxico\2025/08/27\banxico_SF43718_20250827T223917Z.csv md5=34d195cbded546136efcd375b59e6675
+2025-08-27 16:39:17,672 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq\dq_banxico_20250827T223917Z.json
+2025-08-27 16:39:17,672 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq\dq_banxico_20250827T223917Z.json
+2025-08-27 16:39:17,672 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-27 16:39:17,672 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-27 16:39:17,672 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-27 16:39:18,099 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-27 16:39:18,099 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-27 16:39:18,108 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv (rows=5)
+2025-08-27 16:39:18,108 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv
+2025-08-27 16:39:18,116 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv (207 bytes)
+2025-08-27 16:39:18,116 | WARNING | src.utils.verify | [verify] duplicado por hash: ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv == ./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T130933Z.csv
+2025-08-27 16:39:18,116 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 16:39:18,124 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/27\nyc_boroughs_20250827T223918Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-27 16:39:18,132 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq\dq_nyc_boroughs_20250827T223918Z.json
+2025-08-27 16:39:18,132 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq\dq_nyc_boroughs_20250827T223918Z.json
+2025-08-27 16:39:18,132 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-27 16:39:18,132 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-28 07:21:35,227 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-28 07:21:35,229 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL ===
+2025-08-28 07:21:35,955 | INFO | src.extract.extract_csv | CSV copiado a RAW → ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T132135Z.csv
+2025-08-28 07:21:35,955 | INFO | src.extract.extract_csv | Filas copiadas: 48895
+2025-08-28 07:21:35,955 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T132135Z.csv
+2025-08-28 07:21:35,955 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T132135Z.csv (7126583 bytes)
+2025-08-28 07:21:36,004 | INFO | src.utils.verify | [verify] registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T132135Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc manifest=data\status\verify\ab_nyc\manifest_raw.jsonl
+2025-08-28 07:21:36,004 | INFO | __main__ | [verify] registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T132135Z.csv md5=c436b3fbb150c630d5bf455e3b79fdbc
+2025-08-28 07:21:36,175 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T132136Z.json
+2025-08-28 07:21:36,179 | INFO | __main__ | [DQ] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T132136Z.json
+2025-08-28 07:21:36,179 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-28 07:21:36,179 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-28 07:21:36,179 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-28 07:21:36,368 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T132136Z.csv
+2025-08-28 07:21:36,368 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-28 07:21:36,370 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T132136Z.csv
+2025-08-28 07:21:36,371 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T132136Z.csv (33 bytes)
+2025-08-28 07:21:36,396 | INFO | src.utils.verify | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T132136Z.csv md5=34d195cbded546136efcd375b59e6675 manifest=data\status\verify\banxico\manifest_raw.jsonl
+2025-08-28 07:21:36,396 | INFO | __main__ | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T132136Z.csv md5=34d195cbded546136efcd375b59e6675
+2025-08-28 07:21:36,406 | INFO | src.utils.quality | [dq] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T132136Z.json
+2025-08-28 07:21:36,406 | INFO | __main__ | [DQ] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T132136Z.json
+2025-08-28 07:21:36,408 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-28 07:21:36,408 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-28 07:21:36,409 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-28 07:21:36,819 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-28 07:21:36,819 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-28 07:21:36,844 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv (rows=5)
+2025-08-28 07:21:36,844 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv
+2025-08-28 07:21:36,844 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv (207 bytes)
+2025-08-28 07:21:36,880 | INFO | src.utils.verify | [verify] registered source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2 manifest=data\status\verify\nyc_boroughs\manifest_raw.jsonl
+2025-08-28 07:21:36,885 | INFO | __main__ | [verify] registered source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 07:21:36,893 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T132136Z.json
+2025-08-28 07:21:36,893 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T132136Z.json
+2025-08-28 07:21:36,893 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-28 07:21:36,893 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-28 13:44:08,061 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-28 13:44:08,062 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-08-28 13:44:08,247 | INFO | src.utils.verify | [verify] registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data\status\verify\ab_nyc\manifest_raw.jsonl
+2025-08-28 13:44:08,248 | INFO | src.extract.extract_csv | [CSV] Copiado a RAW → ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv | filas=48895
+2025-08-28 13:44:08,248 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-28 13:44:08,357 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T194408Z.json
+2025-08-28 13:44:08,360 | INFO | __main__ | [DQ] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T194408Z.json
+2025-08-28 13:44:08,360 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-28 13:44:08,361 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-28 13:44:08,361 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-28 13:44:08,533 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv
+2025-08-28 13:44:08,533 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-28 13:44:08,535 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv
+2025-08-28 13:44:08,535 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv (33 bytes)
+2025-08-28 13:44:08,552 | INFO | src.utils.verify | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv md5=9e3e379a584b4583c0a5a0491ecdb2a1 manifest=data\status\verify\banxico\manifest_raw.jsonl
+2025-08-28 13:44:08,553 | INFO | __main__ | [verify] registered source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv md5=9e3e379a584b4583c0a5a0491ecdb2a1
+2025-08-28 13:44:08,556 | INFO | src.utils.quality | [dq] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T194408Z.json
+2025-08-28 13:44:08,556 | INFO | __main__ | [DQ] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T194408Z.json
+2025-08-28 13:44:08,557 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-28 13:44:08,558 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-28 13:44:08,559 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-28 13:44:08,899 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-28 13:44:08,902 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-28 13:44:08,920 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv (rows=5)
+2025-08-28 13:44:08,921 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv
+2025-08-28 13:44:08,921 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv (207 bytes)
+2025-08-28 13:44:08,940 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 13:44:08,940 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 13:44:08,942 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T194408Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 13:44:08,947 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T194408Z.json
+2025-08-28 13:44:08,947 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T194408Z.json
+2025-08-28 13:44:08,948 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-28 13:44:08,949 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-28 14:05:50,914 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-28 14:05:50,915 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-08-28 14:05:51,116 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-28 14:05:51,116 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data\status\verify\ab_nyc\manifest_raw.jsonl
+2025-08-28 14:05:51,116 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-28 14:05:51,116 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-08-28 14:05:51,116 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-28 14:05:51,264 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T200551Z.json
+2025-08-28 14:05:51,266 | INFO | __main__ | [DQ] ab_nyc OK | report=data\status\dq\ab_nyc\2025\08\28\dq_ab_nyc_20250828T200551Z.json
+2025-08-28 14:05:51,266 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-28 14:05:51,266 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-28 14:05:51,266 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-28 14:05:51,428 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv
+2025-08-28 14:05:51,429 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-28 14:05:51,429 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv
+2025-08-28 14:05:51,429 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv (33 bytes)
+2025-08-28 14:05:51,439 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv == ./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T194408Z.csv md5=9e3e379a584b4583c0a5a0491ecdb2a1
+2025-08-28 14:05:51,439 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv md5=9e3e379a584b4583c0a5a0491ecdb2a1
+2025-08-28 14:05:51,445 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw\files\banxico\2025/08/28\banxico_SF43718_20250828T200551Z.csv md5=9e3e379a584b4583c0a5a0491ecdb2a1
+2025-08-28 14:05:51,453 | INFO | src.utils.quality | [dq] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T200551Z.json
+2025-08-28 14:05:51,461 | INFO | __main__ | [DQ] banxico OK | report=data\status\dq\banxico\2025\08\28\dq_banxico_20250828T200551Z.json
+2025-08-28 14:05:51,463 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-28 14:05:51,463 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-28 14:05:51,463 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-28 14:05:51,914 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-28 14:05:51,914 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-28 14:05:51,932 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv (rows=5)
+2025-08-28 14:05:51,932 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv
+2025-08-28 14:05:51,932 | INFO | src.utils.verify | [verify] ok: ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv (207 bytes)
+2025-08-28 14:05:51,939 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 14:05:51,939 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 14:05:51,948 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T200551Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-28 14:05:51,960 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T200551Z.json
+2025-08-28 14:05:51,960 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data\status\dq\nyc_boroughs\2025\08\28\dq_nyc_boroughs_20250828T200551Z.json
+2025-08-28 14:05:51,960 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-28 14:05:51,964 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-30 19:10:26,299 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-30 19:10:26,300 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-08-30 19:10:26,617 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-30 19:10:26,630 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-08-30 19:10:26,632 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-30 19:10:26,634 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-08-30 19:10:26,636 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-30 19:10:26,735 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/30/dq_ab_nyc_20250830T191026Z.json
+2025-08-30 19:10:26,738 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/30/dq_ab_nyc_20250830T191026Z.json
+2025-08-30 19:10:26,740 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-30 19:10:26,742 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-30 19:10:26,743 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-30 19:10:26,925 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv
+2025-08-30 19:10:26,927 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-30 19:10:26,929 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv
+2025-08-30 19:10:26,939 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv (30 bytes)
+2025-08-30 19:10:26,996 | INFO | src.utils.verify | [verify] registered source=banxico path=./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c manifest=data/status/verify/banxico/manifest_raw.jsonl
+2025-08-30 19:10:26,997 | INFO | __main__ | [verify] registered source=banxico path=./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-30 19:10:27,013 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/08/30/dq_banxico_20250830T191027Z.json
+2025-08-30 19:10:27,015 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/08/30/dq_banxico_20250830T191027Z.json
+2025-08-30 19:10:27,017 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-30 19:10:27,018 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-30 19:10:27,019 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-30 19:10:27,329 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-30 19:10:27,332 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-30 19:10:27,365 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv (rows=5)
+2025-08-30 19:10:27,367 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv
+2025-08-30 19:10:27,378 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv (207 bytes)
+2025-08-30 19:10:27,419 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-30 19:10:27,421 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-30 19:10:27,428 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/30/nyc_boroughs_20250830T191027Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-30 19:10:27,445 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/30/dq_nyc_boroughs_20250830T191027Z.json
+2025-08-30 19:10:27,447 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/30/dq_nyc_boroughs_20250830T191027Z.json
+2025-08-30 19:10:27,448 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-30 19:10:27,450 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-31 14:17:28,025 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-31 14:17:28,026 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-08-31 14:17:28,425 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 14:17:28,440 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-08-31 14:17:28,442 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 14:17:28,443 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-08-31 14:17:28,445 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 14:17:28,544 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/31/dq_ab_nyc_20250831T141728Z.json
+2025-08-31 14:17:28,546 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/31/dq_ab_nyc_20250831T141728Z.json
+2025-08-31 14:17:28,548 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-31 14:17:28,549 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-31 14:17:28,551 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-31 14:17:28,747 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv
+2025-08-31 14:17:28,749 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-31 14:17:28,751 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv
+2025-08-31 14:17:28,761 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv (30 bytes)
+2025-08-31 14:17:28,798 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv == ./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 14:17:28,800 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 14:17:28,807 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T141728Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 14:17:28,825 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/08/31/dq_banxico_20250831T141728Z.json
+2025-08-31 14:17:28,826 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/08/31/dq_banxico_20250831T141728Z.json
+2025-08-31 14:17:28,828 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-31 14:17:28,830 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-31 14:17:28,831 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-31 14:17:29,161 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-31 14:17:29,164 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-31 14:17:29,195 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv (rows=5)
+2025-08-31 14:17:29,197 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv
+2025-08-31 14:17:29,209 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv (207 bytes)
+2025-08-31 14:17:29,246 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 14:17:29,247 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 14:17:29,253 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T141729Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 14:17:29,272 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/31/dq_nyc_boroughs_20250831T141729Z.json
+2025-08-31 14:17:29,273 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/31/dq_nyc_boroughs_20250831T141729Z.json
+2025-08-31 14:17:29,275 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-31 14:17:29,277 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-08-31 21:57:58,270 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-08-31 21:57:58,271 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-08-31 21:57:58,621 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 21:57:58,637 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-08-31 21:57:58,639 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 21:57:58,640 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-08-31 21:57:58,642 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-08-31 21:57:58,747 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/31/dq_ab_nyc_20250831T215758Z.json
+2025-08-31 21:57:58,749 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/08/31/dq_ab_nyc_20250831T215758Z.json
+2025-08-31 21:57:58,751 | INFO | __main__ | === FIN CSV → RAW ===
+2025-08-31 21:57:58,753 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-08-31 21:57:58,755 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-08-31 21:57:58,953 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv
+2025-08-31 21:57:58,955 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-08-31 21:57:58,957 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv
+2025-08-31 21:57:58,968 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv (30 bytes)
+2025-08-31 21:57:59,006 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv == ./data/raw/files/banxico/2025/08/30/banxico_SF43718_20250830T191026Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 21:57:59,008 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 21:57:59,016 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw/files/banxico/2025/08/31/banxico_SF43718_20250831T215758Z.csv md5=7686dfdd8d2f1fae2d8cdd87a0ed583c
+2025-08-31 21:57:59,041 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/08/31/dq_banxico_20250831T215759Z.json
+2025-08-31 21:57:59,043 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/08/31/dq_banxico_20250831T215759Z.json
+2025-08-31 21:57:59,045 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-08-31 21:57:59,047 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-08-31 21:57:59,049 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-08-31 21:57:59,525 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-08-31 21:57:59,528 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-08-31 21:57:59,566 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv (rows=5)
+2025-08-31 21:57:59,568 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv
+2025-08-31 21:57:59,579 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv (207 bytes)
+2025-08-31 21:57:59,618 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 21:57:59,620 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 21:57:59,628 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/08/31/nyc_boroughs_20250831T215759Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-08-31 21:57:59,650 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/31/dq_nyc_boroughs_20250831T215759Z.json
+2025-08-31 21:57:59,652 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/08/31/dq_nyc_boroughs_20250831T215759Z.json
+2025-08-31 21:57:59,653 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-08-31 21:57:59,655 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-09-02 19:46:38,928 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-02 19:46:38,930 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-02 19:46:39,308 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-02 19:46:39,323 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-02 19:46:39,325 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-02 19:46:39,327 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-02 19:46:39,328 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-02 19:46:39,435 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/02/dq_ab_nyc_20250902T194639Z.json
+2025-09-02 19:46:39,438 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/02/dq_ab_nyc_20250902T194639Z.json
+2025-09-02 19:46:39,440 | INFO | __main__ | === FIN CSV → RAW ===
+2025-09-02 19:46:39,441 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-09-02 19:46:39,443 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-09-02 19:46:39,659 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/09/02/banxico_SF43718_20250902T194639Z.csv
+2025-09-02 19:46:39,660 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-09-02 19:46:39,662 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/09/02/banxico_SF43718_20250902T194639Z.csv
+2025-09-02 19:46:39,676 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/09/02/banxico_SF43718_20250902T194639Z.csv (31 bytes)
+2025-09-02 19:46:39,741 | INFO | src.utils.verify | [verify] registered source=banxico path=./data/raw/files/banxico/2025/09/02/banxico_SF43718_20250902T194639Z.csv md5=25b529671c6306a9baefbbbc9c294d6c manifest=data/status/verify/banxico/manifest_raw.jsonl
+2025-09-02 19:46:39,743 | INFO | __main__ | [verify] registered source=banxico path=./data/raw/files/banxico/2025/09/02/banxico_SF43718_20250902T194639Z.csv md5=25b529671c6306a9baefbbbc9c294d6c
+2025-09-02 19:46:39,770 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/09/02/dq_banxico_20250902T194639Z.json
+2025-09-02 19:46:39,772 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/09/02/dq_banxico_20250902T194639Z.json
+2025-09-02 19:46:39,774 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-09-02 19:46:39,776 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-09-02 19:46:39,777 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-09-02 19:46:40,270 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-09-02 19:46:40,273 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-09-02 19:46:40,313 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv (rows=5)
+2025-09-02 19:46:40,315 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv
+2025-09-02 19:46:40,328 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv (207 bytes)
+2025-09-02 19:46:40,379 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-02 19:46:40,382 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-02 19:46:40,390 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/02/nyc_boroughs_20250902T194640Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-02 19:46:40,419 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/02/dq_nyc_boroughs_20250902T194640Z.json
+2025-09-02 19:46:40,420 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/02/dq_nyc_boroughs_20250902T194640Z.json
+2025-09-02 19:46:40,422 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-09-02 19:46:40,424 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-09-03 11:27:07,805 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-03 11:27:07,807 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-03 11:27:08,457 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 11:27:08,494 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-03 11:27:08,497 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 11:27:08,499 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-03 11:27:08,501 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:25,854 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-03 16:24:25,855 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-03 16:24:26,293 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:26,309 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-03 16:24:26,311 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:26,313 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-03 16:24:26,318 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:28,274 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-03 16:24:28,275 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-03 16:24:28,846 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:28,892 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-03 16:24:28,894 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-03 16:24:28,897 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-03 16:24:28,900 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:24:05,751 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-04 04:24:05,753 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-04 04:24:06,296 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:24:06,319 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-04 04:24:06,320 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:24:06,324 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-04 04:24:06,326 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:24:06,436 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T042406Z.json
+2025-09-04 04:24:06,439 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T042406Z.json
+2025-09-04 04:24:06,441 | INFO | __main__ | === FIN CSV → RAW ===
+2025-09-04 04:24:06,443 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-09-04 04:24:06,445 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-09-04 04:24:06,732 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv
+2025-09-04 04:24:06,756 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-09-04 04:24:06,766 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv
+2025-09-04 04:24:06,792 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv (31 bytes)
+2025-09-04 04:24:06,870 | INFO | src.utils.verify | [verify] registered source=banxico path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv md5=5bf5060d2195471017107aab739923e4 manifest=data/status/verify/banxico/manifest_raw.jsonl
+2025-09-04 04:24:06,872 | INFO | __main__ | [verify] registered source=banxico path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 04:24:06,896 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T042406Z.json
+2025-09-04 04:24:06,901 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T042406Z.json
+2025-09-04 04:24:06,904 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-09-04 04:24:06,907 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-09-04 04:24:06,910 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-09-04 04:24:07,270 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-09-04 04:24:07,273 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-09-04 04:24:07,312 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv (rows=5)
+2025-09-04 04:24:07,314 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv
+2025-09-04 04:24:07,328 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv (207 bytes)
+2025-09-04 04:24:07,381 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:24:07,383 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:24:07,391 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T042407Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:24:07,417 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T042407Z.json
+2025-09-04 04:24:07,420 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T042407Z.json
+2025-09-04 04:24:07,422 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-09-04 04:24:07,424 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-09-04 04:40:39,131 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-04 04:40:39,133 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-04 04:40:39,451 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:40:39,473 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-04 04:40:39,475 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:40:39,478 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-04 04:40:39,480 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 04:40:39,586 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T044039Z.json
+2025-09-04 04:40:39,589 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T044039Z.json
+2025-09-04 04:40:39,591 | INFO | __main__ | === FIN CSV → RAW ===
+2025-09-04 04:40:39,594 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-09-04 04:40:39,595 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-09-04 04:40:40,099 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → /app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv
+2025-09-04 04:40:40,100 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-09-04 04:40:40,103 | INFO | __main__ | Banxico OK | filas=1 | path=/app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv
+2025-09-04 04:40:40,120 | INFO | src.utils.verify | [verify] ok: /app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv (31 bytes)
+2025-09-04 04:40:40,168 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=/app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv == ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 04:40:40,171 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=/app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 04:40:40,180 | WARNING | __main__ | [dedupe] removed source=banxico path=/app/data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T044040Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 04:40:40,207 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T044040Z.json
+2025-09-04 04:40:40,209 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T044040Z.json
+2025-09-04 04:40:40,211 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-09-04 04:40:40,213 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-09-04 04:40:40,215 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-09-04 04:40:42,098 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-09-04 04:40:42,102 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-09-04 04:40:42,144 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: /app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv (rows=5)
+2025-09-04 04:40:42,146 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=/app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv
+2025-09-04 04:40:42,163 | INFO | src.utils.verify | [verify] ok: /app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv (207 bytes)
+2025-09-04 04:40:42,214 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=/app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:40:42,217 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=/app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:40:42,228 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=/app/data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T044042Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 04:40:42,261 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T044042Z.json
+2025-09-04 04:40:42,263 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T044042Z.json
+2025-09-04 04:40:42,265 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-09-04 04:40:42,267 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-09-04 05:00:34,176 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-04 05:00:34,177 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-04 05:00:34,592 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:00:34,605 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-04 05:00:34,607 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:00:34,609 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-04 05:00:34,611 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:00:34,707 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T050034Z.json
+2025-09-04 05:00:34,710 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T050034Z.json
+2025-09-04 05:00:34,711 | INFO | __main__ | === FIN CSV → RAW ===
+2025-09-04 05:00:34,713 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-09-04 05:00:34,715 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-09-04 05:00:35,160 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → /app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv
+2025-09-04 05:00:35,161 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-09-04 05:00:35,163 | INFO | __main__ | Banxico OK | filas=1 | path=/app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv
+2025-09-04 05:00:35,180 | INFO | src.utils.verify | [verify] ok: /app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv (31 bytes)
+2025-09-04 05:00:35,214 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=/app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv == ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:00:35,216 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=/app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:00:35,223 | WARNING | __main__ | [dedupe] removed source=banxico path=/app/data/raw/files/files/banxico/2025/09/04/banxico_SF43718_20250904T050035Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:00:35,254 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T050035Z.json
+2025-09-04 05:00:35,256 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T050035Z.json
+2025-09-04 05:00:35,258 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-09-04 05:00:35,261 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-09-04 05:00:35,263 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-09-04 05:00:36,002 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-09-04 05:00:36,005 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-09-04 05:00:36,058 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: /app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv (rows=5)
+2025-09-04 05:00:36,060 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=/app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv
+2025-09-04 05:00:36,074 | INFO | src.utils.verify | [verify] ok: /app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv (207 bytes)
+2025-09-04 05:00:36,127 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=/app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:00:36,130 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=/app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:00:36,139 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=/app/data/raw/files/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T050036Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:00:36,170 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T050036Z.json
+2025-09-04 05:00:36,172 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T050036Z.json
+2025-09-04 05:00:36,173 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-09-04 05:00:36,175 | INFO | __main__ | === PIPELINE RAW: end ===
+2025-09-04 05:13:35,900 | INFO | __main__ | === PIPELINE: CSV → RAW ===
+2025-09-04 05:13:35,904 | INFO | src.extract.extract_csv | === EXTRACT CSV LOCAL (no dup if same MD5) ===
+2025-09-04 05:13:36,465 | INFO | src.extract.extract_csv | [DBG] md5_fuente=f772a1d8d29bae6e7a9beac0ae880a2b | last_rec_path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:13:36,493 | INFO | src.utils.verify | [verify] reference_registered source=ab_nyc path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv md5=f772a1d8d29bae6e7a9beac0ae880a2b manifest=data/status/verify/ab_nyc/manifest_raw.jsonl
+2025-09-04 05:13:36,495 | INFO | src.extract.extract_csv | [CSV] Sin cambios (MD5 igual). Reutilizando path: ./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:13:36,496 | INFO | src.extract.extract_csv | [CSV] Filas (del CSV fuente): 48895
+2025-09-04 05:13:36,498 | INFO | __main__ | CSV OK | filas=48895 | path=./data/raw\files\ab_nyc\2025/08/28\ab_nyc_20250828T194408Z.csv
+2025-09-04 05:13:36,612 | INFO | src.utils.quality | [dq] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T051336Z.json
+2025-09-04 05:13:36,616 | INFO | __main__ | [DQ] ab_nyc OK | report=data/status/dq/ab_nyc/2025/09/04/dq_ab_nyc_20250904T051336Z.json
+2025-09-04 05:13:36,619 | INFO | __main__ | === FIN CSV → RAW ===
+2025-09-04 05:13:36,620 | INFO | __main__ | === PIPELINE: BANXICO → RAW ===
+2025-09-04 05:13:36,622 | INFO | src.extract.extract_banxico | === EXTRACT API BANXICO ===
+2025-09-04 05:13:36,795 | INFO | src.extract.extract_banxico | Banxico SF43718: 1 filas → ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv
+2025-09-04 05:13:36,798 | INFO | src.extract.extract_banxico | === FIN EXTRACT API BANXICO ===
+2025-09-04 05:13:36,800 | INFO | __main__ | Banxico OK | filas=1 | path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv
+2025-09-04 05:13:36,815 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv (31 bytes)
+2025-09-04 05:13:36,869 | WARNING | src.utils.verify | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv == ./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T042406Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:13:36,873 | WARNING | __main__ | [verify] duplicate_detected source=banxico path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:13:36,882 | WARNING | __main__ | [dedupe] removed source=banxico path=./data/raw/files/banxico/2025/09/04/banxico_SF43718_20250904T051336Z.csv md5=5bf5060d2195471017107aab739923e4
+2025-09-04 05:13:36,923 | INFO | src.utils.quality | [dq] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T051336Z.json
+2025-09-04 05:13:36,925 | INFO | __main__ | [DQ] banxico OK | report=data/status/dq/banxico/2025/09/04/dq_banxico_20250904T051336Z.json
+2025-09-04 05:13:36,927 | INFO | __main__ | === FIN BANXICO → RAW ===
+2025-09-04 05:13:36,930 | INFO | __main__ | === PIPELINE: SCRAPER NYC (Wikipedia) → RAW ===
+2025-09-04 05:13:36,931 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] GET https://en.wikipedia.org/wiki/Boroughs_of_New_York_City
+2025-09-04 05:13:37,409 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Encabezados (leaf): ['Borough', 'County', 'Census(2020)', 'squaremiles', 'squarekm', 'people/sq. mile', 'people/sq. km', 'billions(2022 US$)2']
+2025-09-04 05:13:37,412 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Filas crudas: 8
+2025-09-04 05:13:37,453 | INFO | src.extract.web_scraping_nyc | [nyc_boroughs] Guardado en: ./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv (rows=5)
+2025-09-04 05:13:37,456 | INFO | __main__ | Scraper NYC OK | filas=5 | cols=['borough', 'population', 'land_area_km2', 'density_km2'] | path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv
+2025-09-04 05:13:37,468 | INFO | src.utils.verify | [verify] ok: ./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv (207 bytes)
+2025-09-04 05:13:37,519 | WARNING | src.utils.verify | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv == ./data/raw\files\nyc_boroughs\2025/08/28\nyc_boroughs_20250828T132136Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:13:37,521 | WARNING | __main__ | [verify] duplicate_detected source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:13:37,531 | WARNING | __main__ | [dedupe] removed source=nyc_boroughs path=./data/raw/files/nyc_boroughs/2025/09/04/nyc_boroughs_20250904T051337Z.csv md5=adc4e929cdd0d605f84342c4133045a2
+2025-09-04 05:13:37,569 | INFO | src.utils.quality | [dq] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T051337Z.json
+2025-09-04 05:13:37,571 | INFO | __main__ | [DQ] nyc_boroughs OK | report=data/status/dq/nyc_boroughs/2025/09/04/dq_nyc_boroughs_20250904T051337Z.json
+2025-09-04 05:13:37,574 | INFO | __main__ | === FIN SCRAPER NYC → RAW ===
+2025-09-04 05:13:37,577 | INFO | __main__ | === PIPELINE RAW: end ===
