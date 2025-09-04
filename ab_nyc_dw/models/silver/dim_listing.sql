@@ -14,7 +14,7 @@ select
   latitude,
   longitude,
 
-  -- SCD2 (con tus snapshots de dbt)
+  
   dbt_valid_from::date                         as effective_from,
   coalesce(dbt_valid_to::date, '9999-12-31')   as effective_to,
   (dbt_valid_to is null)                       as is_current

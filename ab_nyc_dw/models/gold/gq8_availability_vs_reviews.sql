@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 with last_snapshot as (
-  -- Último snapshot disponible en la FACT
+  
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
 ),
@@ -44,7 +44,7 @@ labels as (
 
 select
   availability_band,
-  (lo || '–' || hi) as availability_range_days,  -- ej. "0–36", "37–73", ..., "329–365"
+  (lo || '–' || hi) as availability_range_days,  
   avg_availability_days,
   avg_reviews_per_month,
   listings_count

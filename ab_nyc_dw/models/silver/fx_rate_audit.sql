@@ -7,7 +7,7 @@ with src as (
   from {{ ref('stg_banxico') }}
 ),
 read_ts as (
-  -- momento único de la corrida (se usa para todas las filas de esta ejecución)
+  
   select current_timestamp as read_at
 )
 
@@ -21,4 +21,3 @@ select
   'banxico'                                   as source
 from src s
 cross join read_ts r
--- append-only: cada corrida añade un nuevo bloque con el mismo read_at

@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 with last_snapshot as (
-  -- último día realmente cargado en la FACT
+ 
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
 ),

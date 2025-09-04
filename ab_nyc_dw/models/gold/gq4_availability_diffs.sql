@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 with last_snapshot as (
-  -- último día realmente cargado en la FACT
+ 
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
 ),
@@ -15,8 +15,7 @@ base as (
     on f.snapshot_date_key = ls.dk
   join {{ ref('dim_borough') }}     b  using (borough_key)
   join {{ ref('dim_room_type') }}   rt using (room_type_key)
-  -- Si quieres contar solo ofertas activas, descomenta:
-  -- where f.is_active
+  
 )
 select
   borough_name,

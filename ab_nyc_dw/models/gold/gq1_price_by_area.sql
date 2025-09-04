@@ -1,6 +1,6 @@
 {{ config(materialized='view') }}
 
--- Último snapshot (clave y fecha)
+
 with last_snapshot as (
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
@@ -11,7 +11,7 @@ snap_date as (
   join last_snapshot ls on ls.dk = d.date_key
 ),
 
--- FX a usar (por si quieres mostrar MXN también)
+
 fx_asof as (
   select e.usd_to_mxn
   from {{ ref('dim_exchange_rate') }} e
@@ -26,7 +26,7 @@ fx_latest as (
   limit 1
 ),
 
--- Hechos del último snapshot (solo USD)
+
 f as (
   select
     f.borough_key,

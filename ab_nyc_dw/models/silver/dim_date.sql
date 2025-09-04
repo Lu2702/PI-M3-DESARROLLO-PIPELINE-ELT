@@ -1,9 +1,9 @@
 {{ config(materialized='table') }}
 
-{% set date_floor = var('date_floor', '2025-08-28') %}   -- piso mínimo
-{% set days_ahead = var('date_days_ahead', 7) %}         -- colchón hacia adelante
+{% set date_floor = var('date_floor', '2025-08-28') %}   
+{% set days_ahead = var('date_days_ahead', 7) %}         
 
--- Límites usados SOLO desde modelos que NO dependen de dim_date
+
 with stg_bounds as (
   select min(snapshot_date)::date as min_d,
          max(snapshot_date)::date as max_d
@@ -12,11 +12,11 @@ with stg_bounds as (
 fx_bounds as (
   select min(rate_date)::date as min_d,
          max(rate_date)::date as max_d
-  from {{ ref('dim_exchange_rate') }}   -- este modelo no depende de dim_date
+  from {{ ref('dim_exchange_rate') }}   
 ),
 used_bounds as (
   select
-    -- mínimo real observado (staging / fx); si no hubiera datos, usa hoy
+    
     least(
       coalesce((select min_d from stg_bounds), current_date),
       coalesce((select min_d from fx_bounds),  current_date)
@@ -29,9 +29,9 @@ used_bounds as (
 ),
 bounds as (
   select
-    -- No bajar del piso fijado (tu límite inferior es 2025-08-28)
+    
     greatest(to_date('{{ date_floor }}','YYYY-MM-DD'), min_d)              as min_date,
-    -- Cubre el máximo observado + colchón (p. ej., 7 días)
+    
     (max_d + interval '{{ days_ahead }} day')                              as max_date
   from used_bounds
 ),

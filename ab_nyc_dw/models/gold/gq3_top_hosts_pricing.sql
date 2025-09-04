@@ -1,10 +1,10 @@
 {{ config(materialized='view') }}
 
--- g_top_hosts_by_properties_usd.sql
--- Top de hosts por número de propiedades (foto del último snapshot) + métricas de precio en USD
+
+
 
 with last_snapshot as (
-  -- último día realmente cargado en la FACT
+ 
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
 ),
@@ -14,7 +14,7 @@ last_date as (
   join last_snapshot ls on d.date_key = ls.dk
 ),
 f as (
-  -- foto del día: una fila por (listing, host) del último snapshot
+  
   select
     host_key,
     listing_key,
@@ -27,15 +27,15 @@ f as (
 per_host as (
   select
     host_key,
-    count(distinct listing_key)                                                as properties,          -- total de propiedades
-    count(distinct listing_key) filter (where is_active)                       as properties_active,   -- opcional: solo activas
+    count(distinct listing_key)                                                as properties,          
+    count(distinct listing_key) filter (where is_active)                       as properties_active,   
     avg(price_usd)::numeric(12,2)                                              as avg_price_usd,
     stddev_samp(price_usd)::numeric(12,2)                                      as std_price_usd
   from f
   group by 1
 ),
 host_name_asof as (
-  -- nombre del host válido en la fecha del último snapshot (SCD2 as-of)
+  
   select h.host_key, h.host_name
   from {{ ref('dim_host') }} h
   join last_date ld

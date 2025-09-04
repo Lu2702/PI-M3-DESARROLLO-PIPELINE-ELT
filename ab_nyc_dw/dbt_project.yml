@@ -21,5 +21,5 @@ snapshots:
     +target_schema: silver
 
 vars:
-  date_floor: '2025-08-28'   # tu piso real
-  date_days_ahead: 7         # colchón hacia adelante
+  date_floor: '2025-08-28'   
+  date_days_ahead: 7        

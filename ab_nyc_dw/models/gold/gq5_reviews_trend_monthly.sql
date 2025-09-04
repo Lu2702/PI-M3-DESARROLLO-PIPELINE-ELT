@@ -41,7 +41,7 @@ select
   b.borough_name,
   to_char(last_review_month, 'YYYY-MM') as ym,
   avg(reviews_per_month)::numeric(10,2) as avg_reviews_per_month,
-  count(*) as listings_with_review -- cuántos listings tuvieron (al menos) una reseña ese mes
+  count(*) as listings_with_review 
 from by_listing_month x
 join {{ ref('dim_borough') }} b using (borough_key)
 where rn = 1

@@ -1,6 +1,6 @@
 {{ config(materialized='view') }}
 
--- Q9: Oferta per cápita (100k hab.) y densidad (listings/km²) con ranks, percentiles y semáforo
+
 with last_snapshot as (
   select max(snapshot_date_key) as dk
   from {{ ref('fct_listing_snapshot') }}
@@ -35,7 +35,7 @@ enriched as (
 ranked as (
   select
     e.*,
-    -- Percentiles 0–100 donde 100 = mayor intensidad
+    
     round((100.0 * cume_dist() over (order by e.oferta_per_capita_100k))::numeric, 0)::int as pctl_per_capita,
     round((100.0 * cume_dist() over (order by e.densidad_oferta_km2))::numeric, 0)::int     as pctl_density
   from enriched e

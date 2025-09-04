@@ -1,13 +1,9 @@
 {{ config(materialized='view') }}
 
--- g_roomtype_supply_revenue.sql
--- Suma de revenue por tipo de habitación en:
---   • MXN as-of (FX del día del snapshot)
---   • USD del snapshot (moneda base del dataset)
---   • MXN revaluado al último FX disponible en dim_exchange_rate
+
 
 with fx_latest as (
-  -- Último tipo de cambio cargado (no current_date: tomamos el máximo real disponible)
+  
   select e.usd_to_mxn
   from {{ ref('dim_exchange_rate') }} e
   where e.rate_date = (select max(rate_date) from {{ ref('dim_exchange_rate') }})
@@ -18,7 +14,7 @@ base as (
   select
     rt.room_type,
     f.is_active,
-    f.revenue_proxy_mxn,           -- MXN as-of (calculado en la fact)
+    f.revenue_proxy_mxn,           
     f.price_usd,
     f.availability_365
   from {{ ref('fct_listing_snapshot') }} f
