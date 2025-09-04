@@ -13,6 +13,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-# Si quieres que al invocar el servicio sin comando se ejecute el main:
+
 ENTRYPOINT ["python", "-m", "src.main"]
 

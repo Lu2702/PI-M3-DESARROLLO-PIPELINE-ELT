@@ -5,7 +5,7 @@ set -Eeuo pipefail
 airflow db migrate
 
 # 2) Validaciones: modo estricto por defecto
-#    Si deseas permitir password aleatoria, exporta AIRFLOW_ALLOW_RANDOM_ADMIN_PASSWORD=true
+
 ALLOW_RANDOM="${AIRFLOW_ALLOW_RANDOM_ADMIN_PASSWORD:-false}"
 
 need() {
@@ -22,7 +22,7 @@ need AIRFLOW_ADMIN_EMAIL
 need AIRFLOW_ADMIN_FIRSTNAME
 need AIRFLOW_ADMIN_LASTNAME
 
-# 3) Contraseña: requerida, salvo que permitas generación aleatoria segura
+
 if [ -z "${AIRFLOW_ADMIN_PASSWORD:-}" ]; then
   if [ "$ALLOW_RANDOM" = "true" ]; then
     AIRFLOW_ADMIN_PASSWORD="$(python - <<'PY'
@@ -31,7 +31,7 @@ alphabet = string.ascii_letters + string.digits + "!@#$%^&*()-_=+"
 print("".join(secrets.choice(alphabet) for _ in range(24)))
 PY
 )"
-    # Dejamos constancia local para desarrollo (no producción)
+   
     echo "[airflow-init] Se generó una contraseña aleatoria para ${AIRFLOW_ADMIN_USER}:" \
          > /opt/airflow/logs/_bootstrap_admin_password.txt
     echo "$AIRFLOW_ADMIN_PASSWORD" >> /opt/airflow/logs/_bootstrap_admin_password.txt
@@ -43,7 +43,7 @@ PY
   fi
 fi
 
-# 4) Crear usuario si no existe
+
 if ! airflow users list | awk '{print $2}' | grep -qw "${AIRFLOW_ADMIN_USER}"; then
   airflow users create --role Admin \
     --username  "${AIRFLOW_ADMIN_USER}" \

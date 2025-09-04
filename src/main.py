@@ -5,7 +5,7 @@ Descripción:
 
       El extractor decide: si el MD5 ya existe → NO copia y registra referencia;
       si es nuevo → copia y registra archivo.
-    - Mantenemos _post_write() para Banxico y Scraper (sí generan archivo diario).
+    - Mantenemos _post_write() para Banxico (sí genera archivo diario).
 
 Ejecución:
     python -m src.main
@@ -14,7 +14,7 @@ Ejecución:
 from __future__ import annotations
 
 # Carga .env por side-effect (load_dotenv vive en config.py)
-import src.utils.config as config  # noqa: F401
+import src.utils.config as config  
 
 import os
 import json
@@ -105,7 +105,7 @@ def main() -> None:
     logger.info("=== PIPELINE: CSV → RAW ===")
     csv_out, csv_df = run_csv()
     logger.info(f"CSV OK | filas={len(csv_df)} | path={csv_out}")
-    # IMPORTANTE (Estrategia A): NO usamos _post_write() para AB_NYC.
+    # IMPORTANTE : NO usamos _post_write() para AB_NYC.
     # El extractor ya decidió copiar o registrar referencia en el manifest.
 
     # --- DQ CSV (AB_NYC)
